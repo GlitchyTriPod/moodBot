@@ -1,0 +1,14 @@
+{
+    "name": "moodBot",
+    "version": "0.0.1b",
+    "description": "I will play local audio files through to discord.",
+    "author": "Tristan Rowan",
+    "devDependencies": {
+        "discord.js": "11.5.1",
+        "@discordjs/uws": "11.149.1",
+        "bootstrap": "4.3.1",
+        "webpack": "4.39.1",
+        "babel": "6.23.0"
+    },
+    "dependencies": {}
+}
