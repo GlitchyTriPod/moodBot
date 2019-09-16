@@ -5,10 +5,12 @@
     "author": "Tristan Rowan",
     "devDependencies": {
         "discord.js": "11.5.1",
-        "@discordjs/uws": "11.149.1",
-        "bootstrap": "4.3.1",
-        "webpack": "4.39.1",
-        "babel": "6.23.0"
+        "jquery": "3.4.1",
+        "bootstrap": "^4.3.1",
+        "webpack": "^4.39.1"
     },
-    "dependencies": {}
+    "dependencies": {},
+    "scripts": {
+        "test": ""
+    }
 }
