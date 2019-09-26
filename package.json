@@ -4,13 +4,18 @@
     "description": "I will play local audio files through to discord.",
     "author": "Tristan Rowan",
     "devDependencies": {
+        "bootstrap": "^4.3.1",
         "discord.js": "11.5.1",
         "jquery": "3.4.1",
-        "bootstrap": "^4.3.1",
-        "webpack": "^4.39.1"
+        "waveform-playlist": "^3.0.4",
+        "webpack": "^4.39.1",
+        "ffmpeg-binaries": "^4.0.0",
+        "opusscript": "0.0.7",
+        "webpack-cli": "^3.3.9"
     },
-    "dependencies": {},
+    "dependencies": {
+    },
     "scripts": {
-        "test": ""
+        "build": "webpack && del .\\dist\\js\\main.js && move .\\dist\\main.js .\\dist\\js"
     }
 }

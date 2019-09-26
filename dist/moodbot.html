@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>moodBot v0.0.1b</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body style="background-color: #677287; color: white">
+    <div class="container">
+        <div class="col-md-6">
+
+            <!-- Bot token -->
+            <label class="form-label" for="txtBotToken">Enter your bot token:</label>
+            <div class="form-row">
+                <div class="col">
+                    <input type="password" class="form-control" id="txtBotToken" placeholder="Enter bot token">
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-primary" id="btnConnect">
+                        Connect
+                        <span style="display: none" id="spnrLoading" class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="col">
+                    <p id="msgConnection"></p>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</body>
+
+</html>
