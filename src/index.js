@@ -1,9 +1,16 @@
 "use strict"
 
-//#region CONST
-const Discord = require("discord.js/browser")
-const client = new Discord.Client()
+//#region IMPORT
+const DISCORD = require("discord.js/browser")
+const CHANNEL_NAVIGATION = require("../js/channelNavi")
 //#endregion
+
+//#region CONST
+const CLIENT = new DISCORD.Client()
+//#endregion
+
+//#region GLOBAL
+var NAVI
 
 /**
  * When the page is fully loaded
@@ -23,14 +30,14 @@ $(document).ready(() => {
     /**
      * Event fires when client has successfully logged in
      */
-    client.on("ready", () => {
-        
+    CLIENT.on("ready", () => {
+        NAVI = new CHANNEL_NAVIGATION.channelNavi(this)
     })
 
     /**
      * Print client error message to the console when error is hit
      */
-    client.on("error", (err) => {
+    CLIENT.on("error", (err) => {
         console.error(err)
     })
 
@@ -61,7 +68,7 @@ $(document).ready(() => {
         spnrLoading.show()
         msgConnection.hide()
 
-        client.login(
+        CLIENT.login(
             $("#txtBotToken").val()
         ).then(() => {
             hlpr()

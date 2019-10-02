@@ -14,26 +14,53 @@
 
 <body style="background-color: #677287; color: white">
     <div class="container">
-        <div class="col-md-6">
 
-            <!-- Bot token -->
-            <label class="form-label" for="txtBotToken">Enter your bot token:</label>
-            <div class="form-row">
-                <div class="col">
-                    <input type="password" class="form-control" id="txtBotToken" placeholder="Enter bot token">
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary" id="btnConnect">
+        <!-- Connect to bot -->
+        <div class="row">
+            <div class="col-md-6">
+
+                <label class="form-label" for="txtBotToken">Enter your bot token:</label>
+
+                <form class="form-inline">
+                    <input type="password" class="form-control mb-2 mr-sm-2" id="txtBotToken"
+                        placeholder="Enter bot token">
+
+                    <button type="button" class="btn btn-primary mb-2" id="btnConnect">
                         Connect
-                        <span style="display: none" id="spnrLoading" class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                        <span style="display: none" id="spnrLoading" class="spinner-grow spinner-grow-sm" role="status"
+                            aria-hidden="true"></span>
                     </button>
-                </div>
-                <div class="col">
-                    <p id="msgConnection"></p>
-                </div>
+
+                    <small id="msgConnection" style="padding-left: 10px;"></small>
+                </form>
+                <br>
+
             </div>
-            <br>
         </div>
+
+        <!-- Connect to channel -->
+        <div class="row">
+            <div class="col-md-6">
+
+                <label class="form-label">Connect to a Voice Channel:</label>
+
+                <form class="form-inline">
+                    <select class="form-control custom-select mb-2 mr-sm-2" id="selectServer"></select>
+
+                    <select class="form-control custom-select mb-2 mr-sm-2" id="selectChannel"></select>
+
+                    <button type="button" class="btn btn-primary mb-2" id="btnChannel">
+                        Connect
+                        <span style="display: none" id="spnrChannel" class="spinner-grow spinner-grow-sm" role="status"
+                            aria-hidden="true"></span>
+                    </button>
+
+                    <small id="msgChannel" style="padding-left: 10px"></small>
+                </form>
+
+            </div>
+        </div>
+
     </div>
 </body>
 
