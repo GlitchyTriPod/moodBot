@@ -4,7 +4,3 @@
 3. define event handlers for list item selection
 4. define event for channel connection button click
 	(connect to channel)
-
-extra: sever connection to bot when clicking bot connect button again
-
-ALSO: change file linking to make use of import keyword instead of require
