@@ -1,21 +1,28 @@
 {
-    "name": "moodBot",
+    "name": "moodbot",
     "version": "0.0.1b",
     "description": "I will play local audio files through to discord.",
     "author": "Tristan Rowan",
+    "main": "main.js",
     "devDependencies": {
         "bootstrap": "^4.3.1",
         "discord.js": "11.5.1",
-        "jquery": "3.4.1",
-        "waveform-playlist": "^3.0.4",
-        "webpack": "^4.39.1",
+        "electron": "^7.1.1",
         "ffmpeg-binaries": "^4.0.0",
+        "jquery": "3.4.1",
         "opusscript": "0.0.7",
+        "popper.js": "^1.16.0",
+        "webpack": "^4.39.1",
         "webpack-cli": "^3.3.9"
     },
     "dependencies": {
+        "bootstrap": "^4.3.1",
+        "popper.js": "^1.16.0",
+        "jquery": "3.4.1"
     },
     "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "electron .",
         "build": "webpack && del .\\dist\\js\\main.js && move .\\dist\\main.js .\\dist\\js"
     }
 }
