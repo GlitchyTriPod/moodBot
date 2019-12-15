@@ -147,14 +147,6 @@ $(document).ready(() => {
         selectedChannelId = $("#selectChannel").val()
 
         ipcRenderer.send("client-join-channel", selectedGuildId, selectedChannelId)
-
-        // let selectedChannelID = (() => {
-        //     let channelSelector = document.getElementById("selectChannel")
-        //     return channelSelector.options[channelSelector.selectedIndex].value
-        // })()
-
-        // let selectedChannel = CHANNELS.find(channel => channel.id === selectedChannelID)
-
     })
 
     /**

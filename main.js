@@ -14,14 +14,8 @@ const CLIENT = new discord.Client()
 var MAIN_WINDOW
 //#endregion
 
-/**
- * Creates a new window that displays the defined HTML file.
- * NOTE: not as abstract as I'd like. Will override previous window.
- * @param {Number} width The width of the window
- * @param {Number} height The Height of the window
- * @param {String} location The location of the HTML file to display
- */
-let createWindow = () => {
+//#region AppEvents
+app.on("ready", () => {
 
     MAIN_WINDOW = new BrowserWindow({
         width: 1280,
@@ -36,10 +30,7 @@ let createWindow = () => {
     MAIN_WINDOW.on("closed", () => {
         MAIN_WINDOW = null
     })
-}
-
-//#region AppEvents
-app.on("ready", createWindow)
+})
 
 app.on("window-all-closed", () => {
     if (process.platform !== "darwin") app.quit()
