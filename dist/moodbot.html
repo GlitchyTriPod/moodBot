@@ -3,14 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>moodBot v0.0.1b</title>
+    <title>moodBot -PROTOTYPE-</title>
 
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="./css/styles.css">
 
     <script>let $ = require("jquery");</script>
-    <!-- <script>require("popper")</script> -->
-    <script>require("bootstrap")</script>
+    <script>require("bootstrap");</script>
     <script type="text/javascript" src="./js/main.js"></script>
 </head>
 
@@ -63,7 +62,72 @@
             </div>
         </div>
 
+        <!-- Add Audio File -->
+        <div class="row">
+            <div class="col-md-6">
+
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-light" id="addNewAudioFile" data-toggle="modal"
+                        data-target="#newAudioModal">➕ Add New Audio</button>
+                </div>
+
+            </div>
+        </div>
+
+        <br /><br />
+
+        <!-- Audio Library -->
+        <div class="row" id="audioLibrary"></div>
+
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="newAudioModal" tabindex="-1" role="dialog" aria-labelledby="newAudioModalLabel"
+        aria-hidden="true" style="color: black;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newAudioModalLabel">Add New Audio Source</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form id="newAudioForm">
+                        <div class="form-group" style="padding-left: 20px;">
+                            <input type="checkbox" class="form-check-input" id="hasIntroFile">
+                            <label name="hasIntro" class="form-check-label" for="hasIntroFile">Does this audio have an
+                                'Intro' file?</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="fileTitle">Title</label>
+                            <input name="fileTitle" type="text" class="form-control" id="fileTitle"
+                                placeholder="Enter song title">
+                            <div class="invalid-feedback" id="invalid-title" style="display: none">
+                                Please provide a title.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="fileInput">Select Audio File</label>
+                            <input name="fileInput" type="file" class="form-control-file" id="fileInput">
+                            <div class="invalid-feedback" id="invalid-file" style="display:none">
+                                Please provide an audio file.
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="dismissModal" data-dismiss="modal" style="visibility: hidden;"></button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="saveNewAudio">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 
 </html>

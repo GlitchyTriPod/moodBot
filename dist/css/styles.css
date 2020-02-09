@@ -1,0 +1,10 @@
+.card-inner{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+div.card{
+    margin: 10px;
+    color: black;
+    text-align: center;
+}
